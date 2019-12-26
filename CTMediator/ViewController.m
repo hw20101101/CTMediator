@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <HandyFrame/UIView+LayoutMethods.h>
 #import "CTMediator+CTMediatorModuleAActions.h"
-#import "TableViewController.h"
+#import "CTMediator+CTMediatorModuleBActions.h" 
 
 NSString * const kCellIdentifier = @"kCellIdentifier";
 
@@ -81,9 +81,9 @@ NSString * const kCellIdentifier = @"kCellIdentifier";
         }];
     }
     
-    if (indexPath.row == 5) {
-        TableViewController *tableViewController = [[TableViewController alloc] init];
-        [self presentViewController:tableViewController animated:YES completion:nil];
+    if (indexPath.row == 5) {//HW Demo
+        UIViewController *vc = [[CTMediator sharedInstance] CTMediator_tableViewController];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
     if (indexPath.row == 6) {

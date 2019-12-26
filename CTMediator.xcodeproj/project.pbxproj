@@ -18,8 +18,10 @@
 		4A5CE52B1C9547B2006AEDB9 /* Target_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE52A1C9547B2006AEDB9 /* Target_A.m */; };
 		4A85F5541DA92AFC00DB882C /* CTMediator+CTMediatorModuleAActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A85F5531DA92AFC00DB882C /* CTMediator+CTMediatorModuleAActions.m */; };
 		4AC176591DE163B600566741 /* CTMediatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC176581DE163B600566741 /* CTMediatorUITests.m */; };
-		4AED66AE1DB895D900C13EDC /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AED66AD1DB895D900C13EDC /* TableViewController.m */; };
+		4AED66AE1DB895D900C13EDC /* HWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AED66AD1DB895D900C13EDC /* HWTableViewController.m */; };
 		6A1C7FA419878A7AFA10DB7C /* libPods-CTMediator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDD4389F5AEA1D8F6AA0C9F /* libPods-CTMediator.a */; };
+		DA554E5423B4F68E00C10C32 /* Target_B.m in Sources */ = {isa = PBXBuildFile; fileRef = DA554E5323B4F68E00C10C32 /* Target_B.m */; };
+		DA554E5823B4F7BA00C10C32 /* CTMediator+CTMediatorModuleBActions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA554E5723B4F7BA00C10C32 /* CTMediator+CTMediatorModuleBActions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +58,12 @@
 		4AC176561DE163B600566741 /* CTMediatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTMediatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC176581DE163B600566741 /* CTMediatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMediatorUITests.m; sourceTree = "<group>"; };
 		4AC1765A1DE163B600566741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AED66AC1DB895D900C13EDC /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		4AED66AD1DB895D900C13EDC /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		4AED66AC1DB895D900C13EDC /* HWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTableViewController.h; sourceTree = "<group>"; };
+		4AED66AD1DB895D900C13EDC /* HWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTableViewController.m; sourceTree = "<group>"; };
+		DA554E5223B4F68E00C10C32 /* Target_B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_B.h; sourceTree = "<group>"; };
+		DA554E5323B4F68E00C10C32 /* Target_B.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_B.m; sourceTree = "<group>"; };
+		DA554E5623B4F7BA00C10C32 /* CTMediator+CTMediatorModuleBActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+CTMediatorModuleBActions.h"; sourceTree = "<group>"; };
+		DA554E5723B4F7BA00C10C32 /* CTMediator+CTMediatorModuleBActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorModuleBActions.m"; sourceTree = "<group>"; };
 		E9C114EF1101F17773DD4798 /* Pods-CTMediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTMediator.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTMediator/Pods-CTMediator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +160,8 @@
 			children = (
 				4A5CE5291C9547B2006AEDB9 /* Target_A.h */,
 				4A5CE52A1C9547B2006AEDB9 /* Target_A.m */,
+				DA554E5223B4F68E00C10C32 /* Target_B.h */,
+				DA554E5323B4F68E00C10C32 /* Target_B.m */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 		4A85F5501DA92AFC00DB882C /* Categories(实际应用中，这是一个单独的repo，所用需要调度其他模块的人，只需要依赖这个repo。这个repo由target-action维护者维护) */ = {
 			isa = PBXGroup;
 			children = (
+				DA554E5523B4F79200C10C32 /* ModuleB */,
 				4A85F5511DA92AFC00DB882C /* ModuleA */,
 			);
 			name = "Categories(实际应用中，这是一个单独的repo，所用需要调度其他模块的人，只需要依赖这个repo。这个repo由target-action维护者维护)";
@@ -188,8 +197,8 @@
 		4AED66AB1DB895C600C13EDC /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4AED66AC1DB895D900C13EDC /* TableViewController.h */,
-				4AED66AD1DB895D900C13EDC /* TableViewController.m */,
+				4AED66AC1DB895D900C13EDC /* HWTableViewController.h */,
+				4AED66AD1DB895D900C13EDC /* HWTableViewController.m */,
 			);
 			path = TableViewController;
 			sourceTree = "<group>";
@@ -209,6 +218,15 @@
 				E9C114EF1101F17773DD4798 /* Pods-CTMediator.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA554E5523B4F79200C10C32 /* ModuleB */ = {
+			isa = PBXGroup;
+			children = (
+				DA554E5623B4F7BA00C10C32 /* CTMediator+CTMediatorModuleBActions.h */,
+				DA554E5723B4F7BA00C10C32 /* CTMediator+CTMediatorModuleBActions.m */,
+			);
+			path = ModuleB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +295,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -358,8 +377,10 @@
 				4A5CE4FF1C9531C9006AEDB9 /* main.m in Sources */,
 				4A5CE5251C953D7D006AEDB9 /* DemoModuleADetailViewController.m in Sources */,
 				4A5CE51A1C95322F006AEDB9 /* CTMediator.m in Sources */,
+				DA554E5423B4F68E00C10C32 /* Target_B.m in Sources */,
 				4A5CE52B1C9547B2006AEDB9 /* Target_A.m in Sources */,
-				4AED66AE1DB895D900C13EDC /* TableViewController.m in Sources */,
+				DA554E5823B4F7BA00C10C32 /* CTMediator+CTMediatorModuleBActions.m in Sources */,
+				4AED66AE1DB895D900C13EDC /* HWTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
