@@ -17,10 +17,5 @@
 
 - (void)CTMediator_presentImage:(UIImage *)image;
 
-- (UITableViewCell *)CTMediator_tableViewCellWithIdentifier:(NSString *)identifier tableView:(UITableView *)tableView;
-
-- (void)CTMediator_configTableViewCell:(UITableViewCell *)cell withTitle:(NSString *)title atIndexPath:(NSIndexPath *)indexPath;
-
-- (void)CTMediator_cleanTableViewCellTarget;
 
 @end
